@@ -19,7 +19,7 @@ class _HomePageState extends State<HomePage> {
   
 
   Future<void> getData() async {
-    data = await client.getCurrentWeather("${(widget.location==null)? "Vinnytsya":widget.location}");
+    data = await client.getCurrentWeather("${(widget.location==null||widget.location=='unknown')? "Vinnytsya":widget.location}");
   }
 
   @override
